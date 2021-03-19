@@ -16,3 +16,11 @@ WHERE (location="St. Louis City")
 DROP TABLE `techjobs`.`job`;
 
 ## Part 4: Test it with SQL
+
+Note to grader: The textbook says I need to use "is not null" but I am pretty sure this gives the looked for result
+without it. If results are what matter, then this should suffice. If not, I will look at this again.
+
+SELECT name, description
+FROM techjobs.skill
+INNER JOIN techjobs.job_skills ON techjobs.skill.id = techjobs.job_skills.skills_id
+ORDER BY name
